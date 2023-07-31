@@ -1,0 +1,19 @@
+{
+  "entrypoints/application.js": {
+    "file": "assets/application-b40e3d44.js",
+    "isEntry": true,
+    "src": "entrypoints/application.js"
+  },
+  "entrypoints/main.css": {
+    "file": "assets/main-22958cd0.css",
+    "src": "entrypoints/main.css"
+  },
+  "entrypoints/main.js": {
+    "css": [
+      "assets/main-22958cd0.css"
+    ],
+    "file": "assets/main-1cc1fcfe.js",
+    "isEntry": true,
+    "src": "entrypoints/main.js"
+  }
+}
