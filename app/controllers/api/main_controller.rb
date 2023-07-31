@@ -36,7 +36,7 @@ class Api::MainController < ApplicationController
   private
 
   def blog_params
-    params.require(:blog).permit(:subject, :context, :created_at)
+    params.require(:blog).permit(:id, :subject, :context, :created_at)
   end
 
   def blogs
