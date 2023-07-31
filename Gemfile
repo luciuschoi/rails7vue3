@@ -64,7 +64,10 @@ group :development do
   # gem "spring"
 
   gem "capistrano", "~> 3.10", require: false
+  gem 'capistrano3-nginx', '~> 2.0'
+  gem 'capistrano-passenger'
   gem "capistrano-rails", "~> 1.6", require: false
+  gem 'capistrano-rbenv', '~> 2.2'
 end
 
 group :test do
