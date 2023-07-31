@@ -8,7 +8,7 @@ set :repo_url, "git@github.com:luciuschoi/rails7vue3.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :branch, 'main'
 set :stage, :production
-# set :rails_env, "production"
+set :rails_env, "production"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "~/apps/#{fetch(:application)}"
