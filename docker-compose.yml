@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  rails:
+    build: .
+    depends_on:
+      - vite
+    entrypoint: ./docker-rails.sh
+    environment:
+      RAILS_ENV: development
+      VITE_RUBY_HOST: vite
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+  vite:
+    build: .
+    entrypoint: ./docker-vite.sh
+    environment:
+      DEBUG: '*vite*'
+      RAILS_ENV: development
+      VITE_RUBY_HOST: 0.0.0.0
+    ports:
+      - "3036:3036"
+    volumes:
+      - .:/app
