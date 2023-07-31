@@ -7,12 +7,15 @@ set :repo_url, "git@github.com:luciuschoi/rails7vue3.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 set :branch, 'main'
+set :stage, :production
+# set :rails_env, "production"
 
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "~/apps/#{fetch(:application)}"
 
 set :rbenv_type, :user # or :system, or :fullstaq (for Fullstaq Ruby), depends on your rbenv setup
 # set :rbenv_ruby, '3.1.1'
+set :rbenv_path, '/home/deployer/.rbenv'
 set :rbenv_ruby, File.read('.ruby-version').strip
 
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
@@ -47,8 +50,8 @@ set :rbenv_roles, :all # default value
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
 
-set :passenger_in_gemfile, true
-set :passenger_restart_with_touch, false
+# set :passenger_in_gemfile, true
+# set :passenger_restart_with_touch, false
 
 append :linked_files, "config/master.key"
 
